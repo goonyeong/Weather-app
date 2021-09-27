@@ -2,14 +2,16 @@ import React from "react";
 import { IWeatherData } from "../../Global/Types";
 import useGetData from "./useGetData";
 import WeatherBox from "../../Components/WeatherBox";
-import { Title, SectionCity } from "./HomeStyle";
+import { Title, SectionCity, Container } from "./HomeStyle";
+import Login from "../../Components/Login";
 
 function Home(): JSX.Element {
   const result = useGetData();
 
   return (
-    <>
+    <Container>
       <Title>Worldwide Weather</Title>
+      <Login />
       <SectionCity>
         {!result
           ? "no data"
@@ -23,7 +25,7 @@ function Home(): JSX.Element {
               />
             ))}
       </SectionCity>
-    </>
+    </Container>
   );
 }
 
