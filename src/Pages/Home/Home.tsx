@@ -1,9 +1,9 @@
-import React from "react";
-import { IWeatherData } from "../../Global/Types";
-import useGetData from "./useGetData";
-import WeatherBox from "../../Components/WeatherBox";
-import { Title, SectionCity, Container } from "./HomeStyle";
-import Login from "../../Components/Login";
+import React from 'react';
+import { IWeatherData } from '../../Global/Types';
+import useGetData from './useGetData';
+import WeatherBox from '../../Components/WeatherBox';
+import { Title, SectionCity, Container } from './HomeStyle';
+import Login from '../../Components/Login';
 
 function Home(): JSX.Element {
   const result = useGetData();
@@ -14,7 +14,7 @@ function Home(): JSX.Element {
       <Login />
       <SectionCity>
         {!result
-          ? "no data"
+          ? 'no data'
           : result.map((region: IWeatherData) => (
               <WeatherBox
                 key={region.id}
