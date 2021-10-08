@@ -1,6 +1,6 @@
-import React from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
-import { Home, Detail } from "./Pages";
+import React from 'react';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import { Home, Detail } from './Pages';
 
 function RouterComponent(): JSX.Element {
   return (

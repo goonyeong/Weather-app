@@ -1,28 +1,28 @@
-import React from "react";
-import { IPropsWeatherBox } from "../Global/Types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../Global/Fontawesome";
-import { CLink, TempBox, Info } from "./WeatherBoxStyle";
+import React from 'react';
+import { IPropsWeatherBox } from '../Global/Types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../Global/Fontawesome';
+import { CLink, TempBox, Info } from './WeatherBoxStyle';
 
 const FilterWeather = (weather: string) => {
   switch (weather) {
-    case "Clear":
-      return "sun";
-    case "Clouds":
-      return "cloud";
-    case "Rain":
-      return "umbrella";
-    case "Thunderstorm":
-      return "bolt";
-    case "Snow":
-      return "snowflake";
+    case 'Clear':
+      return 'sun';
+    case 'Clouds':
+      return 'cloud';
+    case 'Rain':
+      return 'umbrella';
+    case 'Thunderstorm':
+      return 'bolt';
+    case 'Snow':
+      return 'snowflake';
     default:
-      return "sun";
+      return 'sun';
   }
 };
 
 function WeatherBox(props: IPropsWeatherBox): JSX.Element {
-  console.log("good", props);
+  console.log('good', props);
   return (
     <CLink to={`/city-detail/${props.name}`}>
       <h3>{props.name}</h3>
@@ -36,10 +36,7 @@ function WeatherBox(props: IPropsWeatherBox): JSX.Element {
       </TempBox>
       <Info>
         <span className="icon">
-          <FontAwesomeIcon
-            className="weatherIcon"
-            icon={props.weather ? FilterWeather(props.weather) : "bolt"}
-          />
+          <FontAwesomeIcon className="weatherIcon" icon={props.weather ? FilterWeather(props.weather) : 'bolt'} />
         </span>
         <span> {props.weather}</span>
       </Info>

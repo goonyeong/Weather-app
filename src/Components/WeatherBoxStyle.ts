@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CLink = styled(Link)`
   display: grid;
@@ -35,18 +35,17 @@ export const TempBox = styled.div`
     align-items: flex-end;
     .bar {
       width: 30%;
-      height: ${(props: { temp: number }) =>
-        (props.temp * 1.5 + 30).toString() + "%"};
+      height: ${(props: { temp: number }) => (props.temp * 1.5 + 30).toString() + '%'};
       background-color: ${(props: { temp: number }) =>
         props.temp > 30
-          ? "#91320d"
+          ? '#91320d'
           : props.temp > 20
-          ? "#8d650f"
+          ? '#8d650f'
           : props.temp > 10
-          ? "#737a12"
+          ? '#737a12'
           : props.temp > 0
-          ? "#4b6b21"
-          : "#294163"};
+          ? '#4b6b21'
+          : '#294163'};
       display: flex;
       align-items: center;
       justify-content: center;

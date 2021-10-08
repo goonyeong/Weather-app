@@ -1,14 +1,14 @@
-import { useState, useEffect, useRef } from "react";
-import axios from "axios";
-import { CITIES } from "./CityList";
-import { IWeatherData } from "../../Global/Types";
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import { CITIES } from './CityList';
+import { IWeatherData } from '../../Global/Types';
 
 function useGetData(): IWeatherData[] {
   const api = axios.create({
-    baseURL: "https://api.openweathermap.org/data/2.5/weather?",
+    baseURL: 'https://api.openweathermap.org/data/2.5/weather?',
     params: {
-      appid: "cb84b79207003fda05f58a7f387d50c0",
-      units: "metric",
+      appid: 'cb84b79207003fda05f58a7f387d50c0',
+      units: 'metric',
     },
   });
 
@@ -23,14 +23,14 @@ function useGetData(): IWeatherData[] {
   const getData: FetchData = async () => {
     try {
       for (let i = 0; i < CITIES.length; i++) {
-        const { data: result } = await api.get("", {
+        const { data: result } = await api.get('', {
           params: { q: CITIES[i] },
         });
         arr[i] = result;
       }
       setData(arr);
     } catch {
-      console.log("Error in useGetData!!");
+      console.log('Error in useGetData!!');
     } finally {
       arr = [];
     }

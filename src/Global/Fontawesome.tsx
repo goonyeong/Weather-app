@@ -1,4 +1,4 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faBolt,
   faCloud,
@@ -6,13 +6,6 @@ import {
   faUmbrella,
   faCloudShowersHeavy,
   faSnowflake,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-library.add(
-  faBolt,
-  faCloud,
-  faSun,
-  faUmbrella,
-  faCloudShowersHeavy,
-  faSnowflake
-);
+library.add(faBolt, faCloud, faSun, faUmbrella, faCloudShowersHeavy, faSnowflake);
